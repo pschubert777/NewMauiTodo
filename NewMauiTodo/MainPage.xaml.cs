@@ -67,6 +67,13 @@ public partial class MainPage : ContentPage
         TodoTitleEntry.Text = string.Empty;
         DueDatePicker.Date = DateTime.Now;
     }
+
+    private async void SwipeItem_Invoked(object sender, EventArgs e)
+    {
+        var item = sender as SwipeItem;
+
+        await DisplayAlert(item.Text, $"You invoked the {item.Text} action.", "Ok");
+    }
 }
 
 

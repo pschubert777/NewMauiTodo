@@ -40,6 +40,32 @@
          <CollectionView Grid.Row="4" x:Name="TodosCollection" ItemsSource="{Binding Todos}">
              <CollectionView.ItemTemplate>
                  <DataTemplate>
+
+                     <SwipeView>
+                         <SwipeView.LeftItems>
+                             <SwipeItems Mode="Execute">
+                                 <SwipeItem
+                                     Text="Delete"
+                                     IconImageSource="delete"
+                                     BackgroundColor="Tomato"
+                                     Invoked="SwipeItem_Invoked"
+                                     />
+
+                             </SwipeItems>
+
+                         </SwipeView.LeftItems>
+                         <SwipeView.RightItems>
+                             <SwipeItems Mode="Execute">
+                                 <SwipeItem
+                                     Text="Done"
+                                     IconImageSource="check"
+                                     BackgroundColor="LimeGreen"
+                                     Invoked="SwipeItem_Invoked"
+                                     />
+
+                             </SwipeItems>
+
+                         </SwipeView.RightItems>
                      <Border
                          Stroke="{StaticResource Primary}"
                          StrokeThickness="5"
@@ -88,6 +114,7 @@
                      </Grid>
 
                      </Border>
+                  </SwipeView>
                  </DataTemplate>
              </CollectionView.ItemTemplate>
          </CollectionView>

@@ -57,6 +57,8 @@
 
 	<ItemGroup>
 	  <None Remove="Models\" />
+	  <None Remove="Resources\Images\delete.svg" />
+	  <None Remove="Resources\Images\check.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
